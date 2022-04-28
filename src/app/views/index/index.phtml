@@ -1,0 +1,8 @@
+<?php
+
+echo "hyyy" . "<br>";
+echo $this->config['test']['name']."<br>";
+$title = '</title><script>alert(1)</script>';
+echo $this->escaper->escapeHtml($title)."<br>";
+// echo $title;
+$this->eventsManager->fire('listener:check', $this);
